@@ -38,6 +38,10 @@ Perform the following steps as instructed in this [link](https://docs.microsoft.
 
 ## Post Deployment Configurations:
 
+- Once deployed, edit the Logic App and find the connectors (5 in total) with ![](media/M03-image7.png). 
+- Fix those connectors by adding new connection and sign in to authenticate.
+- Save the Logic App once you have done.
+
 
 
 ## Incident Assignment Logics:
