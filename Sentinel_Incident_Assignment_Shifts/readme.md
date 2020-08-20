@@ -13,9 +13,9 @@ This playbook will assign Incident owner based on Shifts schedule in Microsoft T
 ### 1. Sentinel Workspace details
 Kindly obtain the following information:
 
-> a. Workspace Name
+    * Workspace Name
 
-> b. Workspace Resource Group Name
+    * Workspace Resource Group Name
 
 ### 2. Service Principal
 Create or use existing Service Principal with Azure Sentinel Responder role.
@@ -24,11 +24,11 @@ Steps to create a new Service Principal:
 
 Perform the following steps as instructed in this [link](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal):
 
-a. Register an application with Azure AD and create a service principal
+    * Register an application with Azure AD and create a service principal
 
-b. Create a new application secret
+    * Create a new application secret
 
-c. Assign a role to the application (assign **Azure Sentinel Responder** role to it)
+    * Assign a role to the application (assign **Azure Sentinel Responder** role to it)
 
 
 ### 3. Shifts for Teams
