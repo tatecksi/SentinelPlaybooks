@@ -46,7 +46,7 @@
                         "displayName": "[parameters('EmailAddress')]",
                         "customParameterValues": {},
                 "api": {
-                    "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().name, '/managedApis/azuread')]"
+                    "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azuread')]"
                 }
             }
         },
