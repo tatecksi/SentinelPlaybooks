@@ -426,7 +426,7 @@
                                     {
                                         "name": "SubscriptionID",
                                         "type": "string",
-                                        "value": "subscription().subscriptionId"
+                                        "value": "[subscription().subscriptionId]"
                                     }
                                 ]
                             }
