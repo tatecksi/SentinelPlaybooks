@@ -5,7 +5,7 @@ author: Jeremy Tan
 
 This playbook will assign Incident owner based on Shifts schedule in Microsoft Teams.
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts%2FSentinel_Incident_Assignment_Shifts.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts%2FSentinel_Incident_Assignment_Shifts.json)
 
 
 ## Pre-requisites:
@@ -20,7 +20,7 @@ Kindly obtain the following information:
 ### 2. Service Principal
 Create or use existing Service Principal with Azure Sentinel Responder role.
 
-Steps to create a new Service Principal:
+**Steps to create a new Service Principal:**
 
 Perform the following steps as instructed in this [link](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal):
 
