@@ -733,8 +733,7 @@
                             "azuread": {
                                 "connectionId": "[resourceId('Microsoft.Web/connections', variables('AzureADConnectionName'))]",
                                 "connectionName": "[variables('AzureADConnectionName')]",
-                                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/connections/azuread')]"
-                                    
+                                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().name, '/managedApis/azuread')]"
                             },
                             "azuremonitorlogs": {
                                 "connectionId":  "[resourceId('Microsoft.Web/connections', variables('AzureMonitorLogs'))]",
