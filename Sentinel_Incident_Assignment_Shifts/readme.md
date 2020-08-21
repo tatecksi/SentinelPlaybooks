@@ -3,7 +3,7 @@
 
 author: Jeremy Tan
 
-This playbook will assign Incident owner based on Shifts schedule in Microsoft Teams.
+This playbook will assign an Incident to an owner based on the Shifts schedule in Microsoft Teams.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts%2FSentinel_Incident_Assignment_Shifts.json)
 [![Deploy to Azure Gov](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.png)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts%2FSentinel_Incident_Assignment_Shifts.json)
@@ -14,57 +14,59 @@ This playbook will assign Incident owner based on Shifts schedule in Microsoft T
 
 ## Pre-requisites:
 
+[u]Ensure you have the following details to hand[/u]
+
+
 ### 1. Sentinel Workspace details
-Kindly obtain the following information:
 
 - Workspace Name
 
 - Workspace Resource Group Name
 
 ### 2. Service Principal
-Create or use existing Service Principal with Azure Sentinel Responder role.
+Create or use an existing Service Principal with the Azure Sentinel Responder role.
 
 **Steps to create a new Service Principal:**
 
-Perform the following steps as instructed in this [link](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal):
+Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal):
 
-- Register an application with Azure AD and create a service principal
+- Register an application to Azure AD and create a Service Principal
 
 - Create a new application secret
 
-- Assign a role to the application (assign **Azure Sentinel Responder** role to it)
+- Assign a role to the application (assign the **Azure Sentinel Responder** role)
 
 
 ### 3. Shifts for Teams
-[Shifts](https://support.microsoft.com/en-us/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6) schedule has been setup in Microsoft Teams.
+You must have the [Shifts](https://support.microsoft.com/en-us/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6) schedule setup in Microsoft Teams.
 
 
 
 
 
-## Post Deployment Configurations:
+## Post Deployment Configuration:
 
-- Once deployed, edit the Logic App and find the connectors (5 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic1.png" width="30" height="30">. 
-- Fix those connectors by adding new connection and sign in to authenticate.
-- For Shifts connector, make sure you have selected the Teams channel with Shifts schedule.
+- Once deployed, edit the Logic App and find the connectors (5 in total) that has been marked with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic1.png" width="30" height="30">. 
+- Fix these connectors by adding a new connection to each connector within your Logic App and sign in to authenticate.
+- For the Shifts connector, make sure you have selected the Teams channel with a Shifts schedule.
     
    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/Pic3.png" width="450" height="120">
     
-- Save the Logic App once you have done.
+- Save the Logic App once you have completed the above steps.
 
 
 
 
 
-## Incident Assignment Logics:
+## Incident Assignment Logic:
 
-Incidents are assigned based on the following criterias:
+Incidents are assigned to users based on the following criteria:
 
-- Users who are on shift during the time incident assignment
+- Users who are on shift during the time that the incident is triggeres and the Logic App runs.
 - Users who still have at least **2** hours left before going off shift. 
   
   You can change this value by modifying the below variable:
 
     <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic4.png" width="450" height="200">
 
-- User who has the least incident assignment over the past 24 hours will get the priority first.
+- Users who have had the fewer incidents assigned to them over the past 24 hours will be assigned incident first.
