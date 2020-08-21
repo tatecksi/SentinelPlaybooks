@@ -14,7 +14,7 @@ This playbook will assign an Incident to an owner based on the Shifts schedule i
 
 ## Pre-requisites:
 
-[u]Ensure you have the following details to hand[/u]
+Ensure you have the following details to hand:
 
 
 ### 1. Sentinel Workspace details
