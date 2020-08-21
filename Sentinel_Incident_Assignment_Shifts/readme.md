@@ -40,7 +40,7 @@ Perform the following steps as instructed in this [link](https://docs.microsoft.
 
 ## Post Deployment Configurations:
 
-- Once deployed, edit the Logic App and find the connectors (5 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic1.png">. 
+- Once deployed, edit the Logic App and find the connectors (5 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic1.png" width="20" height="20">. 
 - Fix those connectors by adding new connection and sign in to authenticate.
 - For Shifts connector, make sure you have selected the Teams channel with Shifts schedule.
     
