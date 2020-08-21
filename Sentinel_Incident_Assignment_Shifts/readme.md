@@ -10,6 +10,8 @@ This playbook will assign Incident owner based on Shifts schedule in Microsoft T
 
 
 
+
+
 ## Pre-requisites:
 
 ### 1. Sentinel Workspace details
@@ -38,6 +40,8 @@ Perform the following steps as instructed in this [link](https://docs.microsoft.
 
 
 
+
+
 ## Post Deployment Configurations:
 
 - Once deployed, edit the Logic App and find the connectors (5 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic1.png" width="30" height="30">. 
@@ -47,6 +51,8 @@ Perform the following steps as instructed in this [link](https://docs.microsoft.
    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/Pic3.png" width="450" height="120">
     
 - Save the Logic App once you have done.
+
+
 
 
 
