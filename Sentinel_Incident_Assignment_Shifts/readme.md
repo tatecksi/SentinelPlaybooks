@@ -40,11 +40,11 @@ Perform the following steps as instructed in this [link](https://docs.microsoft.
 
 ## Post Deployment Configurations:
 
-- Once deployed, edit the Logic App and find the connectors (5 in total) with ![](media/Pic1.png). 
+- Once deployed, edit the Logic App and find the connectors (5 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/Pic1.png">. 
 - Fix those connectors by adding new connection and sign in to authenticate.
 - For Shifts connector, make sure you have selected the Teams channel with Shifts schedule.
     
-    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/Pic3.png" width="450" height="120">
+   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/Pic3.png" width="450" height="120">
     
 - Save the Logic App once you have done.
 
@@ -59,6 +59,6 @@ Incidents are assigned based on the following criterias:
   
   You can change this value by modifying the below variable:
 
-      <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic4.png" width="450" height="120">
+    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic4.png" width="450" height="200">
 
 - User who has the least incident assignment over the past 24 hours will get the priority first.
