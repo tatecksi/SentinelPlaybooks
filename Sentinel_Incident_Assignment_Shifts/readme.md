@@ -6,8 +6,6 @@ author: Jeremy Tan
 This playbook will assign Incident owner based on Shifts schedule in Microsoft Teams.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts%2FSentinel_Incident_Assignment_Shifts.json)
-
-
 [![Deploy to Azure Gov](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.png)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts%2FSentinel_Incident_Assignment_Shifts.json)
 
 
@@ -45,7 +43,9 @@ Perform the following steps as instructed in this [link](https://docs.microsoft.
 - Once deployed, edit the Logic App and find the connectors (5 in total) with ![](media/Pic1.png). 
 - Fix those connectors by adding new connection and sign in to authenticate.
 - For Shifts connector, make sure you have selected the Teams channel with Shifts schedule.
-    ![](media/Pic3.png?s=10)
+    
+    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/Pic3.png" width="450" height="120">
+    
 - Save the Logic App once you have done.
 
 
@@ -58,6 +58,7 @@ Incidents are assigned based on the following criterias:
 - Users who still have at least **2** hours left before going off shift. 
   
   You can change this value by modifying the below variable:
-      <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic4.png" width="400" height="150">
+
+      <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic4.png" width="450" height="120">
 
 - User who has the least incident assignment over the past 24 hours will get the priority first.
