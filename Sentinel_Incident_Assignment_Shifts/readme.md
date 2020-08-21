@@ -45,7 +45,7 @@ Perform the following steps as instructed in this [link](https://docs.microsoft.
 - Once deployed, edit the Logic App and find the connectors (5 in total) with ![](media/Pic1.png). 
 - Fix those connectors by adding new connection and sign in to authenticate.
 - For Shifts connector, make sure you have selected the Teams channel with Shifts schedule.
-    ![](media/Pic3.png?s=100). 
+    ![](media/Pic3.png?s=50)
 - Save the Logic App once you have done.
 
 
@@ -55,6 +55,7 @@ Perform the following steps as instructed in this [link](https://docs.microsoft.
 Incidents are assigned based on the following criterias:
 
 - Users who are on shift during the time incident assignment
-- Users who still have at least **2** hours left before going off shift. You can change this value by modifying the below variable:
-    ![](media/Pic4.png?s=100). 
+- Users who still have at least **2** hours left before going off shift. 
+   You can change this value by modifying the below variable:
+       ![](media/Pic4.png?s=100)
 - User who has the least incident assignment over the past 24 hours will get the priority first.
