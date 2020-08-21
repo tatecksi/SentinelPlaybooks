@@ -58,6 +58,8 @@ Incidents are assigned based on the following criterias:
 - Users who still have at least **2** hours left before going off shift. 
   
   You can change this value by modifying the below variable:
-       ![](media/Pic4.png?s=50)
+       ![](media/pic4.png?s=50)
+       
+       <img src="media/pic4.png" width="400" height="150">
 
 - User who has the least incident assignment over the past 24 hours will get the priority first.
