@@ -190,7 +190,7 @@
                                             "title": "@{body('Parse_Incident_JSON')?['properties']?['title']}",
                                             "totalComments": "@body('Parse_Incident_JSON')?['properties']?['totalComments']"
                                         },
-                                        "type": "Microsoft.SecurityInsights/Cases"
+                                        "type": "Microsoft.SecurityInsights/Incidents"
                                     }
                                 },
                                 "Get_user": {
@@ -230,7 +230,7 @@
                                             "Content-Type": "application/json"
                                         },
                                         "method": "PUT",
-                                        "uri": "https://management.azure.com/subscriptions/@{variables('SubscriptionID')}/resourceGroups/@{variables('ResourceGroup')}/providers/Microsoft.OperationalInsights/workspaces/@{variables('WorkspaceName')}/providers/Microsoft.SecurityInsights/cases/@{body('Parse_Incident_Body')?['name']}?api-version=2019-01-01-preview"
+                                        "uri": "https://management.azure.com/subscriptions/@{variables('SubscriptionID')}/resourceGroups/@{variables('ResourceGroup')}/providers/Microsoft.OperationalInsights/workspaces/@{variables('WorkspaceName')}/providers/Microsoft.SecurityInsights/incidents/@{body('Parse_Incident_Body')?['name']}?api-version=2020-01-01"
                                     }
                                 },
                                 "Parse_query_result": {
@@ -381,7 +381,7 @@
                                     "type": "ActiveDirectoryOAuth"
                                 },
                                 "method": "GET",
-                                "uri": "https://management.azure.com/subscriptions/@{variables('SubscriptionID')}/resourceGroups/@{variables('ResourceGroup')}/providers/Microsoft.OperationalInsights/workspaces/@{variables('WorkspaceName')}/providers/Microsoft.SecurityInsights/Cases/@{body('Parse_Incident_Body')?['name']}?api-version=2019-01-01-preview"
+                                "uri": "https://management.azure.com/subscriptions/@{variables('SubscriptionID')}/resourceGroups/@{variables('ResourceGroup')}/providers/Microsoft.OperationalInsights/workspaces/@{variables('WorkspaceName')}/providers/Microsoft.SecurityInsights/Incidents/@{body('Parse_Incident_Body')?['name']}?api-version=2020-01-01"
                             }
                         },
                         "Initialize_variable_-_ExpectedWorkHoursPerIncident": {
