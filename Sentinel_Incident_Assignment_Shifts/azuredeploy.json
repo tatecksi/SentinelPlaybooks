@@ -130,7 +130,7 @@
                     "actions": {
                         "Alert_-_Get_incident": {
                             "runAfter": {
-                                "Initialize_variable_-_TempUserID": [
+                                "Initialize_variable_-_AllowReassignment": [
                                     "Succeeded"
                                 ]
                             },
@@ -324,6 +324,51 @@
                             },
                             "type": "If"
                         },
+                        "Condition_-_Check_for_Existing_Assignee": {
+                            "actions": {
+                                "Condition_-_Check_AllowReassignment_Variable": {
+                                    "actions": {
+                                        "Terminate": {
+                                            "runAfter": {},
+                                            "type": "Terminate",
+                                            "inputs": {
+                                                "runStatus": "Succeeded"
+                                            }
+                                        }
+                                    },
+                                    "runAfter": {},
+                                    "expression": {
+                                        "and": [
+                                            {
+                                                "equals": [
+                                                    "@variables('AllowReassignment')",
+                                                    false
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "type": "If"
+                                }
+                            },
+                            "runAfter": {
+                                "Parse_Incident_JSON": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "expression": {
+                                "and": [
+                                    {
+                                        "not": {
+                                            "equals": [
+                                                "@body('Parse_Incident_JSON')?['properties']?['owner']?['objectId']",
+                                                "@null"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "type": "If"
+                        },
                         "For_each": {
                             "foreach": "@body('Parse_Shifts_List')",
                             "actions": {
@@ -382,6 +427,23 @@
                                 },
                                 "method": "GET",
                                 "uri": "https://management.azure.com/subscriptions/@{variables('SubscriptionID')}/resourceGroups/@{variables('ResourceGroup')}/providers/Microsoft.OperationalInsights/workspaces/@{variables('WorkspaceName')}/providers/Microsoft.SecurityInsights/Incidents/@{body('Parse_Incident_Body')?['name']}?api-version=2020-01-01"
+                            }
+                        },
+                        "Initialize_variable_-_AllowReassignment": {
+                            "runAfter": {
+                                "Initialize_variable_-_TempUserID": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "AllowReassignment",
+                                        "type": "boolean",
+                                        "value": false
+                                    }
+                                ]
                             }
                         },
                         "Initialize_variable_-_ExpectedWorkHoursPerIncident": {
@@ -482,7 +544,7 @@
                         },
                         "List_all_shifts": {
                             "runAfter": {
-                                "Parse_Incident_JSON": [
+                                "Condition_-_Check_for_Existing_Assignee": [
                                     "Succeeded"
                                 ]
                             },
