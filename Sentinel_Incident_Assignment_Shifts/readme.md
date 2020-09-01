@@ -38,8 +38,11 @@ Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/active-di
 
 
 ### 3. Shifts for Teams
-You must have the [Shifts](https://support.microsoft.com/en-us/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6) schedule setup in Microsoft Teams.
+- You must have the [Shifts](https://support.microsoft.com/en-us/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6) schedule setup in Microsoft Teams.
 
+- The Shifts schedule must be published (**Share with team**) 
+
+  <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic2.png" width="900" height="300">
 
 
 
