@@ -42,7 +42,7 @@ Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/active-di
 
 - The Shifts schedule must be published (**Share with team**) 
 
-  <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic2.png" width="700" height="300">
+  <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic2.png" width="700" height="350">
 
 
 
@@ -78,4 +78,4 @@ Incidents are assigned to users based on the following criteria:
 
   Although not recommended, but you can modify the following variable to allow reassignment:
 
-    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/Pic5.png" width="450" height="120">
+    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/Pic5.png" width="450" height="200">
