@@ -53,7 +53,7 @@ Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/active-di
 - Fix these connectors by adding a new connection to each connector within your Logic App and sign in to authenticate.
 - For the Shifts connector, make sure you have selected the Teams channel with a Shifts schedule.
     
-   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/Pic3.png" width="450" height="120">
+   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/Pic3.png" width="500" height="120">
     
 - Save the Logic App once you have completed the above steps.
 
@@ -70,7 +70,7 @@ Incidents are assigned to users based on the following criteria:
   
   You can change this value by modifying the below variable:
 
-    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic4.png" width="450" height="200">
+    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic4.png" width="500" height="180">
 
 - Users who have had the fewer incidents assigned to them over the past 24 hours will be assigned incident first.
 
@@ -78,4 +78,4 @@ Incidents are assigned to users based on the following criteria:
 
   Although not recommended, but you can modify the following variable to allow reassignment:
 
-    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic5.png" width="450" height="200">
+    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic5.png" width="500" height="180">
