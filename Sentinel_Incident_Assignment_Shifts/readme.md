@@ -19,9 +19,9 @@ Ensure you have the following details to hand:
 
 ### 1. Sentinel Workspace details
 
-- Workspace Name
+- Workspace Name.
 
-- Workspace Resource Group Name
+- Workspace Resource Group Name.
 
 ### 2. Service Principal
 Create or use an existing Service Principal with the Azure Sentinel Responder role.
@@ -30,17 +30,17 @@ Create or use an existing Service Principal with the Azure Sentinel Responder ro
 
 Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal):
 
-- Register an application to Azure AD and create a Service Principal
+- Register an application to Azure AD and create a Service Principal.
 
-- Create a new application secret
+- Create a new application secret.
 
-- Assign a role to the application (assign the **Azure Sentinel Responder** role)
+- Assign a role to the application (assign the **Azure Sentinel Responder** role).
 
 
 ### 3. Shifts for Teams
 - You must have the [Shifts](https://support.microsoft.com/en-us/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6) schedule setup in Microsoft Teams.
 
-- The Shifts schedule must be published (**Share with team**) 
+- The Shifts schedule must be published (**Share with team**).
 
   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic2.png" width="700" height="350">
 
