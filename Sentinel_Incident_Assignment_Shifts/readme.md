@@ -98,7 +98,8 @@ Incidents are assigned to users based on the following criteria:
 ## Email Notification:
 
 - When an incident is assigned, the incident owner will be notified via email.
-- Below is the sample email notification. The email body has a banner with colour mapped to incident's severity (High=red, Medium=Orange, Low=Yellow and Informational=Grey)
+- Below is the sample email notification. 
 
-   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic6.png" width="500" height="180">
+   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic6.png" width="500" height="240">
 
+- The email body has a banner with colour mapped to incident's severity (High=red, Medium=Orange, Low=Yellow and Informational=Grey).
