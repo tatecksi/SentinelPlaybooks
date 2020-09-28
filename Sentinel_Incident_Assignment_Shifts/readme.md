@@ -91,3 +91,11 @@ Incidents are assigned to users based on the following criteria:
   Although not recommended, but you can modify the following variable to allow reassignment:
 
     <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic5.png" width="500" height="180">
+    
+    
+    
+    
+## Email Notification:
+
+- When an incident is assigned, the incident owner will be notified via email.
+
