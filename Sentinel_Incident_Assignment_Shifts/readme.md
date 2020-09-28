@@ -102,4 +102,4 @@ Incidents are assigned to users based on the following criteria:
 
    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic6.png" width="500" height="240">
 
-- The email body has a banner with colour mapped to incident's severity (High= red, Medium= orange, Low= yellow and Informational= grey).
+- The email body has a banner with colour mapped to incident's severity (High=red, Medium=orange, Low=yellow and Informational=grey).
