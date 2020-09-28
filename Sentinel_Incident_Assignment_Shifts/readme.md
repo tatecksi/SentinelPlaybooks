@@ -4,6 +4,7 @@
 author: Jeremy Tan
 
 This playbook will assign an Incident to an owner based on the Shifts schedule in Microsoft Teams.
+An email will also be sent to notify the assigned user on the incident assignment.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts%2Fazuredeploy.json)
 [![Deploy to Azure Gov](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.png)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts%2Fazuredeploy.json)
@@ -23,7 +24,7 @@ Ensure you have the following details to hand:
 
 - Workspace Resource Group Name.
 
-### 2. Service Principal
+### 2. Service Principal with the Azure Sentinel Responder role
 Create or use an existing Service Principal with the Azure Sentinel Responder role.
 
 **Steps to create a new Service Principal:**
@@ -45,11 +46,22 @@ Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/active-di
   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic2.png" width="700" height="350">
 
 
+### 4. Permission on Azure AD
+- There is an Azure AD connector in this Logic App to get details for a user.
+- To use the Azure AD connector, you need to **Sign-in** with an account with the following administrator permissions:
+    - Group.ReadWrite.All
+    - User.ReadWrite.All
+    - Directory.ReadWrite.All
+
+
+### 5. An O365 account to be used to send email notification
+- Login details of the O365 account.
+
 
 
 ## Post Deployment Configuration:
 
-- Once deployed, edit the Logic App and find the connectors (5 in total) that has been marked with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic1.png" width="30" height="30">. 
+- Once deployed, edit the Logic App and find the connectors (6 in total) that has been marked with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic1.png" width="30" height="30">. 
 - Fix these connectors by adding a new connection to each connector within your Logic App and sign in to authenticate.
 - For the Shifts connector, make sure you have selected the Teams channel with a Shifts schedule.
     
@@ -65,8 +77,8 @@ Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/active-di
 
 Incidents are assigned to users based on the following criteria:
 
-- Users who are on shift during the time that the incident is triggeres and the Logic App runs.
-- Users who still have at least **2** hours left before going off shift. 
+- Only users who have started their shifts during the time the Logic App runs will be considered.
+- Users who still have at least **1** hours left before going off shift. 
   
   You can change this value by modifying the below variable:
 
