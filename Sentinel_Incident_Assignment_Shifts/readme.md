@@ -29,7 +29,7 @@ Create or use an existing Service Principal with the Azure Sentinel Responder ro
 
 **Steps to create a new Service Principal:**
 
-Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal):
+Follow the steps in this [link](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal):
 
 - Register an application to Azure AD and create a Service Principal.
 
