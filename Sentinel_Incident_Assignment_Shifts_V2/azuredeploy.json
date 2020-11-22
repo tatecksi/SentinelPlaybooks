@@ -230,7 +230,7 @@
                                         },
                                         "host": {
                                             "connection": {
-                                                "name": "@parameters('$connections')['office365_1']['connectionId']"
+                                                "name": "@parameters('$connections')['office365']['connectionId']"
                                             }
                                         },
                                         "method": "post",
@@ -271,7 +271,7 @@
                                         },
                                         "host": {
                                             "connection": {
-                                                "name": "@parameters('$connections')['azuresentinel_1']['connectionId']"
+                                                "name": "@parameters('$connections')['azuresentinel']['connectionId']"
                                             }
                                         },
                                         "method": "put",
