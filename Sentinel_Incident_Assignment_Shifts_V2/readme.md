@@ -22,7 +22,7 @@ Ensure you have the following details:
 
 
 ### 1. User account with Azure Sentinel Responder role
-- Create or use an existing user account with the Azure Sentinel Responder role.
+- Create or use an existing user account with Azure Sentinel Responder role.
 
 - The user account will be used in Azure Sentinel connectors (Incident Trigger & Update incident).
 
