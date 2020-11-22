@@ -6,6 +6,7 @@ author: Jeremy Tan
 version: 2.0
 
 This playbook will assign an Incident to an owner based on the Shifts schedule in Microsoft Teams.
+
 An email will be sent to notify the assigned user on the incident assignment.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts_V2%2Fazuredeploy.json)
