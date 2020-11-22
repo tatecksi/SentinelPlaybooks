@@ -6,7 +6,7 @@ author: Jeremy Tan
 version: 2.0
 
 This playbook will assign an Incident to an owner based on the Shifts schedule in Microsoft Teams.
-An email will also be sent to notify the assigned user on the incident assignment.
+An email will be sent to notify the assigned user on the incident assignment.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts_V2%2Fazuredeploy.json)
 [![Deploy to Azure Gov](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.png)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts_V2%2Fazuredeploy.json)
@@ -83,6 +83,6 @@ Incidents are assigned to users based on the following criteria:
 - When an incident is assigned, the incident owner will be notified via email.
 - Below is the sample email notification:
 
-   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic6.png" width="500" height="240">
+   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/pic6.png" width="500" height="240">
 
 - The email body has a banner with colour mapped to incident's severity (High=red, Medium=orange, Low=yellow and Informational=grey).
