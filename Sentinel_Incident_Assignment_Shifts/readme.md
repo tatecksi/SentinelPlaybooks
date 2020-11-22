@@ -3,7 +3,7 @@
 
 author: Jeremy Tan
 
-Version: 1.0
+version: 1.0
 
 This playbook will assign an Incident to an owner based on the Shifts schedule in Microsoft Teams.
 An email will also be sent to notify the assigned user on the incident assignment.
