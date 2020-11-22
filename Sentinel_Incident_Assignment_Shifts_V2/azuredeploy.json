@@ -13,22 +13,7 @@
         "EmailAddress": {
             "defaultValue": "Your email address",
             "type": "string"
-        },
-         "WorkspaceName": {
-            "type": "String"
-        },
-        "WorkspaceResourceGroup": {
-            "type": "String"
-        },
-        "SPN_TenantID": {
-            "type": "String"
-        },   
-        "SPN_ClientID": {
-            "type": "String"
-        },       
-        "SPN_Secret": {
-            "type": "String"
-        }
+        }         
     },
     "variables": {
         "AzureADConnectionName": "[concat('azuread-', parameters('PlaybookName'))]",
