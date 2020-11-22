@@ -39,8 +39,8 @@ Ensure you have the following details:
 
 - The user account will be used in Shifts connector (List all shifts).
 
-### 4. User account with permissions in Azure AD
-- Create or use an existing user account with the following administrator permissions:
+### 4. Account with permissions in Azure AD
+- Create or use an existing user account or service principal with the following administrator permissions:
     - Group.ReadWrite.All
     - User.ReadWrite.All
     - Directory.ReadWrite.All
