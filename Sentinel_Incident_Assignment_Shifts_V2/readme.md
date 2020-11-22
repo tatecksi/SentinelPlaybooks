@@ -17,7 +17,7 @@ An email will be sent to notify the assigned user on the incident assignment.
 
 ## Pre-requisites:
 
-Ensure you have the following details to hand:
+Ensure you have the following details:
 
 
 ### 1. User account with the Azure Sentinel Responder role
