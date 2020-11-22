@@ -21,10 +21,10 @@ An email will be sent to notify the assigned user on the incident assignment.
 Ensure you have the following details:
 
 
-### 1. User account with the Azure Sentinel Responder role
+### 1. User account with Azure Sentinel Responder role
 - Create or use an existing user account with the Azure Sentinel Responder role.
 
-- The user account will be used in Azure Sentinel connectors.
+- The user account will be used in Azure Sentinel connectors (Incident Trigger & Update incident).
 
 
 ### 2. Setup Shifts schedule
@@ -34,20 +34,27 @@ Ensure you have the following details:
 
   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic2.png" width="700" height="350">
 
-### 3. User account for Shifts
-- Create or use an existing user account with **Owner** permission in a Team.
+### 3. User account with Owner role in Microsoft Teams
+- Create or use an existing user account with **Owner** role in a Team.
 
+- The user account will be used in Shifts connector (List all shifts).
 
-### 4. Permission on Azure AD
-- There is an Azure AD connector in this Logic App to get details for a user.
-- To use the Azure AD connector, you need to **Sign-in** with an account with the following administrator permissions:
+### 4. User account with permissions in Azure AD
+- Create or use an existing user account with the following administrator permissions:
     - Group.ReadWrite.All
     - User.ReadWrite.All
     - Directory.ReadWrite.All
+    
+- The user account will be used in Azure AD connector (Get user).
+
+### 5. User account with Log Analytics Reader role
+- Create or use an existing user account with Log Analytics Reader role on the Azure Sentinel workspace.
+
+- The user account will be used in Azure Monitor Logs connector (Run query and list results).
 
 
-### 5. An O365 account to be used to send email notification
-- Login details of the O365 account.
+### 6. An O365 account to be used to send email notification
+- The user account will be used in O365 connector (Send an email).
 
 
 ## Post Deployment Configuration:
