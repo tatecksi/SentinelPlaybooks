@@ -8,8 +8,8 @@ version: 2.0
 This playbook will assign an Incident to an owner based on the Shifts schedule in Microsoft Teams.
 An email will also be sent to notify the assigned user on the incident assignment.
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts%2Fazuredeploy.json)
-[![Deploy to Azure Gov](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.png)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts%2Fazuredeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts_V2%2Fazuredeploy.json)
+[![Deploy to Azure Gov](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazuregov.png)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Ftatecksi%2FSentinelPlaybooks%2Fmaster%2FSentinel_Incident_Assignment_Shifts_V2%2Fazuredeploy.json)
 
 
 
@@ -20,32 +20,21 @@ An email will also be sent to notify the assigned user on the incident assignmen
 Ensure you have the following details to hand:
 
 
-### 1. Sentinel Workspace details
+### 1. User account with the Azure Sentinel Responder role
+- Create or use an existing user account with the Azure Sentinel Responder role.
 
-- Workspace Name.
-
-- Workspace Resource Group Name.
-
-### 2. Service Principal with the Azure Sentinel Responder role
-Create or use an existing Service Principal with the Azure Sentinel Responder role.
-
-**Steps to create a new Service Principal:**
-
-Follow the steps in this [link](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal):
-
-- Register an application to Azure AD and create a Service Principal.
-
-- Create a new application secret.
-
-- Assign a role to the application (assign the **Azure Sentinel Responder** role).
+- The user account will be used in Azure Sentinel connectors.
 
 
-### 3. Shifts for Teams
-- You must have the [Shifts](https://support.microsoft.com/en-us/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6) schedule setup in Microsoft Teams.
+### 2. Setup Shifts schedule
+- You must have the [Shifts](https://support.microsoft.com/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6) schedule setup in Microsoft Teams.
 
 - The Shifts schedule must be published (**Share with team**).
 
   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic2.png" width="700" height="350">
+
+### 3. User account for Shifts
+- Create or use an existing user account with **Owner** permission in a Team.
 
 
 ### 4. Permission on Azure AD
@@ -60,14 +49,13 @@ Follow the steps in this [link](https://docs.microsoft.com/azure/active-director
 - Login details of the O365 account.
 
 
-
 ## Post Deployment Configuration:
 
-- Once deployed, edit the Logic App and find the connectors (6 in total) that has been marked with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic1.png" width="30" height="30">. 
-- Fix these connectors by adding a new connection to each connector within your Logic App and sign in to authenticate.
-- For the Shifts connector, make sure you have selected the Teams channel with a Shifts schedule.
+- Once deployed, edit the Logic App and find the connectors (6 in total) that has been marked with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/pic1.png" width="30" height="30">. 
+- Fix these connectors by adding a new connection to each connector within your Logic App and sign in with the accounts described under pre-requisites.
+- For the Shifts connector, you need to select the Teams channel with a Shifts schedule.
     
-   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/Pic3.png" width="500" height="120">
+   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic3.png" width="500" height="120">
     
 - Save the Logic App once you have completed the above steps.
 
@@ -84,17 +72,10 @@ Incidents are assigned to users based on the following criteria:
   
   You can change this value by modifying the below variable:
 
-    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic4.png" width="500" height="180">
+    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/pic4.png" width="500" height="180">
 
 - Users who have had the fewer incidents assigned to them over the past 24 hours will be assigned incident first.
 
-- If an incident is already assigned to someone, triggering this Playbook will not perform reassignment.
-
-  Although not recommended, but you can modify the following variable to allow reassignment:
-
-    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic5.png" width="500" height="180">
-    
-    
     
     
 ## Email Notification:
