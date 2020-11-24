@@ -41,6 +41,9 @@
             "apiVersion": "2016-06-01",
             "name": "[variables('AzureMonitorLogs')]",
             "location": "[resourceGroup().location]",
+             "dependsOn": [
+                "[resourceId('Microsoft.Web/connections', variables('azuread'))]"               
+            ],
             "properties": {
                         "displayName": "[parameters('EmailAddress')]",
                         "customParameterValues": {},
