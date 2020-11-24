@@ -39,24 +39,20 @@ Ensure you have the following details:
 
 - The user account will be used in Shifts connector (List all shifts).
 
-### 4. User account with Directory readers role in Azure AD
-- Create or use an existing user account with **Directory readers** role
-    
-- The user account will be used in Azure AD connector (Get user).
 
-### 5. User account with Log Analytics Reader role
+### 4. User account with Log Analytics Reader role
 - Create or use an existing user account with Log Analytics Reader role on the Azure Sentinel workspace.
 
 - The user account will be used in Azure Monitor Logs connector (Run query and list results).
 
 
-### 6. An O365 account to be used to send email notification
+### 5. An O365 account to be used to send email notification
 - The user account will be used in O365 connector (Send an email).
 
 
 ## Post Deployment Configuration:
 
-- Once deployed, edit the Logic App and find the connectors (6 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/pic1.png" width="30" height="30">. 
+- Once deployed, edit the Logic App and find the connectors (5 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/pic1.png" width="30" height="30">. 
 - Fix these connectors by adding a new connection to each connector and sign in with the accounts described under pre-requisites.
 - For the Shifts connector, you need to select the Teams channel with a Shifts schedule.
     
