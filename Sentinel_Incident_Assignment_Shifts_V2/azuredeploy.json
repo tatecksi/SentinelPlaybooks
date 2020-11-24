@@ -16,7 +16,7 @@
         }         
     },
     "variables": {
-        "AzureADConnectionName": "[concat('azuread-', parameters('PlaybookName'))]",
+        "azuread": "[concat('azuread-', parameters('PlaybookName'))]",
         "AzureMonitorLogs": "[concat('azuremonitorlogs-', parameters('PlaybookName'))]",
         "AzureSentinel": "[concat('azuresentinel-', parameters('PlaybookName'))]",
         "office365": "[concat('office365-', parameters('PlaybookName'))]",
@@ -26,7 +26,7 @@
         {
             "type": "Microsoft.Web/connections",
             "apiVersion": "2016-06-01",
-            "name": "[variables('AzureADConnectionName')]",
+            "name": "[variables('azuread')]",
             "location": "[resourceGroup().location]",
             "properties": {
                         "displayName": "[parameters('EmailAddress')]",
@@ -94,7 +94,7 @@
             "name": "[parameters('PlaybookName')]",
             "location": "eastus",
             "dependsOn": [
-                "[resourceId('Microsoft.Web/connections', variables('AzureADConnectionName'))]",
+                "[resourceId('Microsoft.Web/connections', variables('azuread'))]",
                 "[resourceId('Microsoft.Web/connections', variables('AzureMonitorLogs'))]",
                 "[resourceId('Microsoft.Web/connections', variables('AzureSentinel'))]",
                 "[resourceId('Microsoft.Web/connections', variables('office365'))]",
@@ -495,8 +495,8 @@
                     "$connections": {
                         "value": {
                             "azuread": {
-                                "connectionId": "[resourceId('Microsoft.Web/connections', variables('AzureADConnectionName'))]",
-                                "connectionName": "[variables('AzureADConnectionName')]",
+                                "connectionId": "[resourceId('Microsoft.Web/connections', variables('azuread'))]",
+                                "connectionName": "[variables('azuread')]",
                                 "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azuread')]"
                             },
                             "azuremonitorlogs": {
