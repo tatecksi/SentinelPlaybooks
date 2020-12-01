@@ -58,7 +58,9 @@ Ensure you have the following details:
     
    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic3.png" width="500" height="120">
    
-   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic7.png" width="500" height="120">
+   
+   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic7.png" width="500" height="200">
+   
     
 - Save the Logic App once you have completed the above steps.
 
