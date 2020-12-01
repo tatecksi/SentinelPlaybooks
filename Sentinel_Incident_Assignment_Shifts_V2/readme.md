@@ -61,7 +61,7 @@ Ensure you have the following details:
    <br />   
    
    Click on the cross sign for the drop down list to appear.   
-   <br />     
+   
    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic7.png" width="500" height="200">
    
     
