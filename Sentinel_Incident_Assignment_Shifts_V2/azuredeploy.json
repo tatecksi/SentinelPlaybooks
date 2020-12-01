@@ -115,58 +115,20 @@
                     "actions": {
                         "Condition_-_Check_User_Array": {
                             "actions": {
-                                "Compose_-_User_Array": {
-                                    "runAfter": {},
-                                    "type": "Compose",
-                                    "inputs": "@variables('User')"
-                                },
-                                "Compose_HTML": {
+                                "Compose_HTML_Email": {
                                     "runAfter": {
                                         "Update_incident": [
                                             "Succeeded"
                                         ]
                                     },
                                     "type": "Compose",
-                                    "inputs": "<!DOCTYPE html>\n<html>\n<head>    \n<style>\n.header-Informational{background-color: grey;color: white;}.header-Low{background-color: yellow;color: black;}.header-Medium{background-color: orange;color: black;}.header-High{background-color: red;color: white;}\nspan{display: none;}.severity-1{display: inline;text-decoration:none;}\n{display: inline;text-decoration:none;}.cell{float: left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; max-width: 100%;}\n</style>\n</head>\n<body>\n<table class=\"header-@{triggerBody()?['object']?['properties']?['severity']}\" style=\"table-layout: auto; width: 100%; padding-left: 10px; padding-right:10px;font-size:20px\" ><tr>\n<td class=\"align-middle\" height=\"50\" align=\"left\" style=\"width: 20%;\">Severity:<b><i>@{triggerBody()?['object']?['properties']?['severity']}</b></i></td>\n<td class=\"align-middle\" height=\"50\" align=\"left\" style=\"width: 75%;\">Title: <b><i>@{triggerBody()?['object']?['properties']?['title']}</b></i></td></tr><tr>\n</table>\n<div style=\"margin-top: 20px\">\n\n   The following incident in Azure Sentinel has been assigned to <b>@{body('Update_incident')?['properties']?['owner']?['assignedTo']}</b>.\n\n\n   <h1>Incident Details:</h1>\n\n   <b>Incident Number:</b> @{triggerBody()?['object']?['properties']?['incidentNumber']}<br />\n   <b>Title:</b> @{triggerBody()?['object']?['properties']?['title']} <br />\n   <b>Owner:</b> @{body('Update_incident')?['properties']?['owner']?['assignedTo']}<br />\n   <b>Severity:</b> @{triggerBody()?['object']?['properties']?['severity']}<br />\n   <b>TimeGenerated(UTC):</b> @{triggerBody()?['object']?['properties']?['createdTimeUtc']} <br />\n   <b>Status:</b> @{triggerBody()?['object']?['properties']?['status']} <br />\n   <br />\n   <b>Incident link:</b> <a href=\"https://portal.azure.com/#asset/Microsoft_Azure_Security_Insights/Incident@{triggerBody()?['object']?['id']}\">View Incident</a><br />\n\n   </body>\n   </html>\n\n"
-                                },                               
-                                "Parse_query_result": {
-                                    "runAfter": {
-                                        "Run_query_and_list_results_-_Get_user_with_low_assignment_": [
-                                            "Succeeded"
-                                        ]
-                                    },
-                                    "type": "ParseJson",
-                                    "inputs": {
-                                        "content": "@body('Run_query_and_list_results_-_Get_user_with_low_assignment_')?['value']",
-                                        "schema": {
-                                            "items": {
-                                                "properties": {
-                                                    "Count": {
-                                                        "type": "integer"
-                                                    },
-                                                    "User": {
-                                                        "type": "string"
-                                                    }
-                                                },
-                                                "required": [
-                                                    "User",
-                                                    "Count"
-                                                ],
-                                                "type": "object"
-                                            },
-                                            "type": "array"
-                                        }
-                                    }
+                                    "inputs": "<!DOCTYPE html>\n<html>\n<head>    \n<style>\n.header-Informational{background-color: grey;color: white;}.header-Low{background-color: yellow;color: black;}.header-Medium{background-color: orange;color: black;}.header-High{background-color: red;color: white;}\nspan{display: none;}.severity-1{display: inline;text-decoration:none;}\n{display: inline;text-decoration:none;}.cell{float: left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; max-width: 100%;}\n</style>\n</head>\n<body>\n<table class=\"header-@{triggerBody()?['object']?['properties']?['severity']}\" style=\"table-layout: auto; width: 100%; padding-left: 10px; padding-right:10px;font-size:20px\" ><tr>\n<td class=\"align-middle\" height=\"50\" align=\"left\" style=\"width: 20%;\">Severity:<b><i>@{triggerBody()?['object']?['properties']?['severity']}</b></i></td>\n<td class=\"align-middle\" height=\"50\" align=\"left\" style=\"width: 75%;\">Title: <b><i>@{triggerBody()?['object']?['properties']?['title']}</b></i></td></tr><tr>\n</table>\n<div style=\"margin-top: 20px\">\n\n  The following incident in Azure Sentinel has been assigned to <b>@{body('Update_incident')?['properties']?['owner']?['assignedTo']}</b>.\n\n\n  <h1>Incident Details:</h1>\n\n  <b>Incident Number:</b> @{triggerBody()?['object']?['properties']?['incidentNumber']}<br />\n  <b>Title:</b> @{triggerBody()?['object']?['properties']?['title']} <br />\n  <b>Owner:</b> @{body('Update_incident')?['properties']?['owner']?['assignedTo']} <br />\n  <b>Severity:</b> @{triggerBody()?['object']?['properties']?['severity']}<br />\n  <b>TimeGenerated(UTC):</b> @{triggerBody()?['object']?['properties']?['createdTimeUtc']} <br />\n  <b>Status:</b> @{triggerBody()?['object']?['properties']?['status']} <br />\n  <br />\n  <b>Incident link:</b> <a href=\"https://portal.azure.com/#asset/Microsoft_Azure_Security_Insights/Incident@{triggerBody()?['object']?['id']}\">View Incident</a><br />\n\n  </body>\n  </html>\n\n"
                                 },
                                 "Run_query_and_list_results_-_Get_user_with_low_assignment_": {
-                                    "runAfter": {
-                                        "Compose_-_User_Array": [
-                                            "Succeeded"
-                                        ]
-                                    },
+                                    "runAfter": {},
                                     "type": "ApiConnection",
                                     "inputs": {
-                                        "body": "let ShiftUsers= datatable(User:string)\n@{outputs('Compose_-_User_Array')}\n| distinct User;\nSecurityIncident\n| extend UserID = tostring(parse_json(Owner).objectId)\n| where isnotempty(UserID)\n| distinct IncidentName, UserID\n| summarize count() by UserID\n| join kind=rightouter ShiftUsers on $left.UserID == $right.User\n| project User, Count=iif(isempty(count_),0,count_)\n| sort by User\n| top 1 by Count asc\n",
+                                        "body": "let ShiftUsers= datatable(User:string)\n@{variables('User')}\n| distinct User;\nSecurityIncident\n| extend UserID = tostring(parse_json(Owner).objectId)\n| where isnotempty(UserID)\n| distinct IncidentName, UserID\n| summarize count() by UserID\n| join kind=rightouter ShiftUsers on $left.UserID == $right.User\n| project User, Count=iif(isempty(count_),0,count_)\n| sort by User\n| top 1 by Count asc",
                                         "host": {
                                             "connection": {
                                                 "name": "@parameters('$connections')['azuremonitorlogs']['connectionId']"
@@ -185,14 +147,14 @@
                                 },
                                 "Send_an_email_(V2)": {
                                     "runAfter": {
-                                        "Compose_HTML": [
+                                        "Compose_HTML_Email": [
                                             "Succeeded"
                                         ]
                                     },
                                     "type": "ApiConnection",
                                     "inputs": {
                                         "body": {
-                                            "Body": "<p>@{outputs('Compose_HTML')}</p>",
+                                            "Body": "<p>@{outputs('Compose_HTML_Email')}</p>",
                                             "Subject": "Azure Sentinel Incident Assignment Notification - Incident Number: @{triggerBody()?['object']?['properties']?['incidentNumber']}",
                                             "To": "@body('Update_incident')?['properties']?['owner']?['email']"
                                         },
@@ -205,28 +167,9 @@
                                         "path": "/v2/Mail"
                                     }
                                 },
-                                "Set_User_ID": {
-                                    "foreach": "@body('Parse_query_result')",
-                                    "actions": {
-                                        "Set_variable": {
-                                            "runAfter": {},
-                                            "type": "SetVariable",
-                                            "inputs": {
-                                                "name": "UserID",
-                                                "value": "@items('Set_User_ID')['User']"
-                                            }
-                                        }
-                                    },
-                                    "runAfter": {
-                                        "Parse_query_result": [
-                                            "Succeeded"
-                                        ]
-                                    },
-                                    "type": "Foreach"
-                                },
                                 "Update_incident": {
                                     "runAfter": {
-                                        "Set_User_ID": [
+                                        "Run_query_and_list_results_-_Get_user_with_low_assignment_": [
                                             "Succeeded"
                                         ]
                                     },
@@ -234,7 +177,7 @@
                                     "inputs": {
                                         "body": {
                                             "incidentArmId": "@triggerBody()?['object']?['id']",
-                                            "owner": "@variables('UserID')",
+                                            "owner": "@{body('Run_query_and_list_results_-_Get_user_with_low_assignment_')['value'][0]['User']}",
                                             "ownerAction": "Assign"
                                         },
                                         "host": {
@@ -248,7 +191,7 @@
                                 }
                             },
                             "runAfter": {
-                                "For_each": [
+                                "For_each_Shifts_list": [
                                     "Succeeded"
                                 ]
                             },
@@ -264,17 +207,17 @@
                             },
                             "type": "If"
                         },
-                        "For_each": {
-                            "foreach": "@body('Parse_Shifts_List')",
+                        "For_each_Shifts_list": {
+                            "foreach": "@body('List_all_shifts')?['value']",
                             "actions": {
-                                "Condition_-_StartDate_and_EndDate": {
+                                "Condition_-_Start_and_End_date": {
                                     "actions": {
-                                        "Append_to_array_variable": {
+                                        "Append_to_User_array_variable": {
                                             "runAfter": {},
                                             "type": "AppendToArrayVariable",
                                             "inputs": {
                                                 "name": "User",
-                                                "value": "@items('For_each')['userId']"
+                                                "value": "@items('For_each_Shifts_list')?['userId']"
                                             }
                                         }
                                     },
@@ -283,13 +226,13 @@
                                         "and": [
                                             {
                                                 "lessOrEquals": [
-                                                    "@ticks(formatDateTime(items('For_each')?['sharedShift']?['startDateTime']))",
+                                                    "@ticks(formatDateTime(items('For_each_Shifts_list')?['sharedShift']?['startDateTime']))",
                                                     "@ticks(formatDateTime(utcNow()))"
                                                 ]
                                             },
                                             {
                                                 "greaterOrEquals": [
-                                                    "@ticks(formatDateTime(items('For_each')?['sharedShift']?['endDateTime']))",
+                                                    "@ticks(formatDateTime(items('For_each_Shifts_list')?['sharedShift']?['endDateTime']))",
                                                     "@ticks(formatDateTime(addHours(utcNow(),variables('ExpectedWorkHoursPerIncident'))))"
                                                 ]
                                             }
@@ -299,7 +242,7 @@
                                 }
                             },
                             "runAfter": {
-                                "Parse_Shifts_List": [
+                                "List_all_shifts": [
                                     "Succeeded"
                                 ]
                             },
@@ -334,25 +277,9 @@
                                 ]
                             }
                         },
-                        "Initialize_variable_-_UserID": {
-                            "runAfter": {
-                                "Initialize_variable_-_User": [
-                                    "Succeeded"
-                                ]
-                            },
-                            "type": "InitializeVariable",
-                            "inputs": {
-                                "variables": [
-                                    {
-                                        "name": "UserID",
-                                        "type": "string"
-                                    }
-                                ]
-                            }
-                        },
                         "List_all_shifts": {
                             "runAfter": {
-                                "Initialize_variable_-_UserID": [
+                                "Initialize_variable_-_User": [
                                     "Succeeded"
                                 ]
                             },
@@ -364,95 +291,10 @@
                                     }
                                 },
                                 "method": "get",
-                                "path": "/v1.0/teams/@{encodeURIComponent('0805b054-13e5-4833-9d25-2c8932175a32')}/schedule/shifts",
+                                "path": "/v1.0/teams/@{encodeURIComponent('')}/schedule/shifts",
                                 "queries": {
                                     "endTime": "@{addDays(utcNow(),1)}",
                                     "startTime": "@{addDays(utcNow(),-1)}"
-                                }
-                            }
-                        },
-                        "Parse_Shifts_List": {
-                            "runAfter": {
-                                "List_all_shifts": [
-                                    "Succeeded"
-                                ]
-                            },
-                            "type": "ParseJson",
-                            "inputs": {
-                                "content": "@body('List_all_shifts')?['value']",
-                                "schema": {
-                                    "items": {
-                                        "properties": {
-                                            "@@odata.etag": {
-                                                "type": "string"
-                                            },
-                                            "createdDateTime": {},
-                                            "draftShift": {},
-                                            "id": {
-                                                "type": "string"
-                                            },
-                                            "lastModifiedBy": {
-                                                "properties": {
-                                                    "application": {},
-                                                    "conversation": {},
-                                                    "device": {},
-                                                    "user": {
-                                                        "properties": {
-                                                            "displayName": {
-                                                                "type": "string"
-                                                            },
-                                                            "id": {
-                                                                "type": "string"
-                                                            }
-                                                        },
-                                                        "type": "object"
-                                                    }
-                                                },
-                                                "type": "object"
-                                            },
-                                            "lastModifiedDateTime": {
-                                                "type": "string"
-                                            },
-                                            "schedulingGroupId": {
-                                                "type": "string"
-                                            },
-                                            "sharedShift": {
-                                                "properties": {
-                                                    "activities": {
-                                                        "type": "array"
-                                                    },
-                                                    "displayName": {},
-                                                    "endDateTime": {
-                                                        "type": "string"
-                                                    },
-                                                    "notes": {},
-                                                    "startDateTime": {
-                                                        "type": "string"
-                                                    },
-                                                    "theme": {
-                                                        "type": "string"
-                                                    }
-                                                },
-                                                "type": "object"
-                                            },
-                                            "userId": {
-                                                "type": "string"
-                                            }
-                                        },
-                                        "required": [
-                                            "@@odata.etag",
-                                            "id",
-                                            "createdDateTime",
-                                            "lastModifiedDateTime",
-                                            "schedulingGroupId",
-                                            "userId",
-                                            "draftShift",
-                                            "lastModifiedBy",
-                                            "sharedShift"
-                                        ],
-                                        "type": "object"
-                                    },
-                                    "type": "array"
                                 }
                             }
                         }
