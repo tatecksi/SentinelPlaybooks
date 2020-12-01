@@ -57,6 +57,8 @@ Ensure you have the following details:
 - For the Shifts connector, you need to select the Teams channel with a Shifts schedule (click on the cross sign for the drop down list to appear).
     
    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic3.png" width="500" height="120">
+   
+   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic7.png" width="500" height="120">
     
 - Save the Logic App once you have completed the above steps.
 
