@@ -55,7 +55,7 @@ Ensure you have the following details:
 - Once deployed, go to the Logic App's blade and click on **Identity** under Settings.
 - Click **On** under the **System assigned** tab and click **Save**.
 
-<img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic8.png" width="1000" height="400">
+<img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic8.png" width="1100" height="400">
    <br />    
    
    
