@@ -32,7 +32,7 @@ Ensure you have the following details:
 
 - The Shifts schedule must be published (**Share with team**).
 
-  <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Time_Trigger/media/pic2.png" width="700" height="350">
+  <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/pic2.png" width="700" height="350">
 
 ### 3. User account with Owner role in Microsoft Teams
 - Create or use an existing user account with **Owner** role in a Team.
@@ -55,21 +55,21 @@ Ensure you have the following details:
 - Once deployed, go to the Logic App's blade and click on **Identity** under Settings.
 - Click **On** under the **System assigned** tab and click **Save**.
 
-<img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Time_Trigger/media/Pic8.png" width="500" height="140">
+<img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic8.png" width="500" height="140">
    <br />    
    
    
 
-- Edit the Logic App and find the connectors (5 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Time_Trigger/media/pic1.png" width="30" height="30">. 
+- Edit the Logic App and find the connectors (5 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/pic1.png" width="30" height="30">. 
 - Fix these connectors by adding a new connection to each connector and sign in with the accounts described under pre-requisites.
 - For the Shifts connector, you need to select the Teams channel with a Shifts schedule.
     
-   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Time_Trigger/media/Pic3.png" width="500" height="140">
+   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic3.png" width="500" height="140">
    <br />    
    
    Click on the cross sign for the drop-down list to appear.   
    
-   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Time_Trigger/media/Pic7.png" width="500" height="200">
+   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic7.png" width="500" height="200">
    
     
 - Save the Logic App once you have completed the above steps.
@@ -87,7 +87,7 @@ Incidents are assigned to users based on the following criteria:
   
   You can change this value by modifying the below variable:
 
-    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Time_Trigger/media/pic4.png" width="500" height="180">
+    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/pic4.png" width="500" height="180">
 
 - Users who have had the fewer incidents assigned to them over the past 24 hours will be assigned incident first.
 
@@ -98,6 +98,6 @@ Incidents are assigned to users based on the following criteria:
 - When an incident is assigned, the incident owner will be notified via email.
 - Below is the sample email notification:
 
-   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Time_Trigger/media/pic6.png" width="500" height="240">
+   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/pic6.png" width="500" height="240">
 
 - The email body has a banner with colour mapped to incident's severity (High=red, Medium=orange, Low=yellow and Informational=grey).
