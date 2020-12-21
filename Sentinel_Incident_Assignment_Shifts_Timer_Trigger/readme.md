@@ -93,7 +93,7 @@ Ensure you have the following details:
 
 The Logic App will get the available analysts on Shift and distribute the incidents accordingly.
 
-  <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic10.png" width="500" height="300">
+  <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic10.png" width="550" height="300">
 
 
 
