@@ -77,7 +77,7 @@
         {
             "type": "Microsoft.Logic/workflows",
             "apiVersion": "2017-07-01",
-            "name": "[parameters('workflows_Sentinel_Incident_Assignment_Shifts_Email_name')]",
+            "name": "[parameters('PlaybookName')]",
             "location": "[resourceGroup().location]",
             "dependsOn": [                
                 "[resourceId('Microsoft.Web/connections', variables('AzureMonitorLogs'))]",
