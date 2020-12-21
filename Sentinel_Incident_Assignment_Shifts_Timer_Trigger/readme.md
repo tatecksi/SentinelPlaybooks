@@ -61,7 +61,8 @@ Ensure you have the following details:
    
 - Click on **Azure role assignments** to assign role to the Managed Identity.
 - Click on **+ Add role assignment**. 
-- Select **Resource group** under Scope and select the Subscription and Resource group where the Azure Sentinel Workspace is located. Select **Azure Sentinel Responder** under Role.
+- Select **Resource group** under Scope and select the Subscription and Resource group where the Azure Sentinel Workspace is located. 
+  Select **Azure Sentinel Responder** under Role and click **Save**.
 
   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic9.png" width="1200" height="280">
    <br />  
