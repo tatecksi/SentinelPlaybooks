@@ -424,7 +424,7 @@
                                     {
                                         "name": "ExpectedWorkHoursPerIncident",
                                         "type": "integer",
-                                        "value": 0
+                                        "value": 1
                                     }
                                 ]
                             }
