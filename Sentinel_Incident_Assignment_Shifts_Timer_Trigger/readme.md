@@ -53,11 +53,17 @@ Ensure you have the following details:
 ## Post Deployment Configuration:
 
 - Once deployed, go to the Logic App's blade and click on **Identity** under Settings.
-- Click **On** under the **System assigned** tab and click **Save**.
+- Select **On** under the **System assigned** tab. Click **Save** and select **Yes** when prompted.
 
-<img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic8.png" width="1300" height="350">
+  <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic8.png" width="1300" height="350">
    <br />    
    
+- Click on **Azure role assignments** to assign role to the Managed Identity.
+- Click on **+ Add role assignment**. 
+- Select **Resource group** under Scope and select the Subscription and Resource group where the Azure Sentinel Workspace is located. Select **Azure Sentinel Responder** under Role.
+
+  <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic9.png" width="1300" height="350">
+   <br />  
    
 
 - Edit the Logic App and find the connectors (5 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/pic1.png" width="30" height="30">. 
