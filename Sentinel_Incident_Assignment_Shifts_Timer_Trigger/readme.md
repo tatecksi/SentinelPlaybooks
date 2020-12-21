@@ -52,6 +52,7 @@ Ensure you have the following details:
 
 ## Post Deployment Configuration:
 
+### 1. Enable Managed Identity and configure role assignment
 - Once deployed, go to the Logic App's blade and click on **Identity** under Settings.
 - Select **On** under the **System assigned** tab. Click **Save** and select **Yes** when prompted.
 
@@ -66,6 +67,7 @@ Ensure you have the following details:
    <br />  
    
 
+### 2. Configure connections
 - Edit the Logic App and find the connectors (5 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/pic1.png" width="30" height="30">. 
 - Fix these connectors by adding a new connection to each connector and sign in with the accounts described under pre-requisites.
 - For the Shifts connector, you need to select the Teams channel with a Shifts schedule.
