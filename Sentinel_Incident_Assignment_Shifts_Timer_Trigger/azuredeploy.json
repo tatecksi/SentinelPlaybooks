@@ -457,7 +457,7 @@
                                     {
                                         "name": "IncidentLookback_Minutes",
                                         "type": "integer",
-                                        "value": 180
+                                        "value": 10
                                     }
                                 ]
                             }
