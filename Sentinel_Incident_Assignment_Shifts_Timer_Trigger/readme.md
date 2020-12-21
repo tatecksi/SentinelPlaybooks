@@ -91,7 +91,12 @@ Ensure you have the following details:
 
 - The Logic App will run every 5 minutes to check for new incidents in the last 10 minutes without assignees (both values are configurable in the Logic App's variables).
 
-- Only users who have started their shifts during the time the Logic App runs will be considered.
+The Logic App will get the available analysts on Shift and distribute the incidents accordingly.
+
+  <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic10.png" width="500" height="180">
+
+
+
 - Users who still have at least **1** hours left before going off shift. 
   
   You can change this value by modifying the below variable:
