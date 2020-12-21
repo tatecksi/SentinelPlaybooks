@@ -61,7 +61,7 @@ Ensure you have the following details:
    
 - Click on **Azure role assignments** to assign role to the Managed Identity.
 - Click on **+ Add role assignment**. 
-- Select **Resource group** under Scope and select the Subscription and Resource group where the Azure Sentinel Workspace is located. 
+- Select **Resource group** under Scope and select the **Subscription** and **Resource group** where the Azure Sentinel Workspace is located. 
   Select **Azure Sentinel Responder** under Role and click **Save**.
 
   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic9.png" width="1200" height="280">
@@ -69,14 +69,14 @@ Ensure you have the following details:
    
 
 ### 2. Configure connections
-- Edit the Logic App and find the connectors (5 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/pic1.png" width="30" height="30">. 
+- Edit the Logic App and find the connectors (4 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/pic1.png" width="30" height="30">. 
 - Fix these connectors by adding a new connection to each connector and sign in with the accounts described under pre-requisites.
 - For the Shifts connector, you need to select the Teams channel with a Shifts schedule.
     
    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic3.png" width="500" height="140">
    <br />    
    
-   Click on the cross sign for the drop-down list to appear.   
+   Click on the **X** sign for the drop-down list to appear.   
    
    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/Pic7.png" width="500" height="200">
    
