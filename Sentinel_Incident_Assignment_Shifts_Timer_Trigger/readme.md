@@ -89,7 +89,7 @@ Ensure you have the following details:
 
 ## Incident Assignment Logic:
 
-Incidents are assigned to users based on the following criteria:
+- The Logic App will run every 5 minutes to check for new incidents in the last 10 minutes without assignees (both values are configurable in the Logic App's variables).
 
 - Only users who have started their shifts during the time the Logic App runs will be considered.
 - Users who still have at least **1** hours left before going off shift. 
@@ -98,7 +98,7 @@ Incidents are assigned to users based on the following criteria:
 
     <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_Timer_Trigger/media/pic4.png" width="500" height="180">
 
-- Users who have had the fewer incidents assigned to them over the past 24 hours will be assigned incident first.
+- Users who have had the fewer incidents assigned to them on the current shift will be assigned incident first.
 
     
     
