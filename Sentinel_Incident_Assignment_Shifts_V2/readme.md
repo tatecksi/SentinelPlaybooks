@@ -82,7 +82,7 @@ Incidents are assigned to users based on the following criteria:
 
     <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/pic4.png" width="500" height="180">
 
-- Users who have had the fewer incidents assigned to them on the current Shift will be assigned incident first.
+- User with the least incidents assigned on the current Shift will be assigned incident first.
 
     
     
