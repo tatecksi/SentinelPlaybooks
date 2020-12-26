@@ -56,12 +56,12 @@ Ensure you have the following details:
 - Once deployed, go to the Logic App's blade and click on **Identity** under Settings.
 - Select **On** under the **System assigned** tab. Click **Save** and select **Yes** when prompted.
 
-  <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic8.png" width="1000" height="360">
+  <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic8.png" width="900" height="360">
    <br />    
    
 - Click on **Azure role assignments** to assign role to the Managed Identity.
 
- <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic9.png" width="1200" height="280">
+ <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic9.png" width="900" height="280">
    <br />  
    
 - Click on **+ Add role assignment**. 
