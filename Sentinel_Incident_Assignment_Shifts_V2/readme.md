@@ -3,7 +3,7 @@
 
 author: Jeremy Tan
 
-version: 2.1
+version: 2.2
 
 This playbook will assign an Incident to an owner based on the Shifts schedule in Microsoft Teams.
 
@@ -53,7 +53,7 @@ Ensure you have the following details:
 ## Post Deployment Configuration:
 
 - Edit the Logic App or go to Logic app designer.
-- Expand each step to find the connectors (5 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/pic1.png" width="30" height="30">. 
+- Expand each step to find the connectors (6 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/pic1.png" width="30" height="30">. 
 - Fix these connectors by adding a new connection to each connector and sign in with the accounts described under pre-requisites.
 - For the Shifts connector, you need to select the Teams channel with a Shifts schedule.
     
