@@ -66,7 +66,7 @@ Ensure you have the following details:
    
 - Click on **+ Add role assignment**. 
 - Select **Resource group** under Scope and select the **Subscription** and **Resource group** where the Azure Sentinel Workspace is located. 
-  Select **Azure Sentinel Responder** under Role and click **Save**.
+  Select **Azure Sentinel Reader** under Role and click **Save**.
 
  
    
