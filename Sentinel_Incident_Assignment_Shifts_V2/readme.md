@@ -69,6 +69,7 @@ Ensure you have the following details:
   Select **Azure Sentinel Reader** under Role and click **Save**.
 
 
+### 2. Configure connections
 - Edit the Logic App or go to Logic app designer.
 - Expand each step to find the connectors (6 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/pic1.png" width="30" height="30">. 
 - Fix these connectors by adding a new connection to each connector and sign in with the accounts described under pre-requisites.
