@@ -156,7 +156,7 @@
                                             "runAfter": {},
                                             "type": "ApiConnection",
                                             "inputs": {
-                                                "body": "let Shifts = datatable ( User:string, Count:string )\n@{replace(string(variables('User')),'\\','')};\nShifts\n| sort by User\n| top 1 by Count asc",
+                                                "body": "let Shifts = datatable ( User:string, Count:string )\n@{replace(string(variables('User')),'\\','')};\nShifts\n| extend Count = toint(Count)\n| sort by User\n| top 1 by Count asc",
                                                 "host": {
                                                     "connection": {
                                                         "name": "@parameters('$connections')['azuremonitorlogs']['connectionId']"
