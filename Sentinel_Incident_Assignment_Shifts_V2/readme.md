@@ -73,12 +73,16 @@ Ensure you have the following details:
 - Edit the Logic App or go to Logic app designer.
 - Expand each step to find the connectors (6 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/pic1.png" width="30" height="30">. 
 - Fix these connectors by adding a new connection to each connector and sign in with the accounts described under pre-requisites.
-- For the Shifts connector, you need to select the Teams channel with a Shifts schedule.
+
+
+### 3. Select the Shifts schedule
+- Edit the Logic App or go to Logic app designer.
+- Find the **List all shifts** connector, click on the **X** sign next to Team field for the drop-down list to appear.
     
    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic3.png" width="500" height="140">
    <br />    
    
-   Click on the **X** sign for the drop-down list to appear.   
+- Select the Teams channel with your Shifts schedule from the drop-down list. 
    
    <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/Pic7.png" width="500" height="200">
    
