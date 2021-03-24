@@ -40,10 +40,10 @@ Ensure you have the following details:
 - The user account will be used in Shifts connector (List all shifts).
 
 
-### 4. User account with Log Analytics Reader role
-- Create or use an existing user account with Log Analytics Reader role on the Azure Sentinel workspace.
+### 4. User account/Service Principal with Log Analytics Reader role
+- Create or use an existing user account/Service Principal with Log Analytics Reader role on the Azure Sentinel workspace.
 
-- The user account will be used in Azure Monitor Logs connector (Run query and list results).
+- The user account/Service Principal will be used in Azure Monitor Logs connector (Run query and list results).
 
 
 ### 5. An O365 account to be used to send email notification
