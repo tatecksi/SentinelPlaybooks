@@ -71,7 +71,7 @@ Ensure you have the following details:
 
 ### 2. Configure connections
 - Edit the Logic App or go to Logic app designer.
-- Expand each step to find the connectors (6 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/pic1.png" width="30" height="30">. 
+- Expand each step to find the following connectors (6 in total) with <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts_V2/media/pic1.png" width="30" height="30">. 
   1. Incident Trigger
   2. Update Incident
   3. Add comment to incident
