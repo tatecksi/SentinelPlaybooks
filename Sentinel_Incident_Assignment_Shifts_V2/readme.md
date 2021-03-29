@@ -34,7 +34,7 @@ Ensure you have the following details:
 
   <img src="https://github.com/tatecksi/SentinelPlaybooks/blob/master/Sentinel_Incident_Assignment_Shifts/media/pic2.png" width="700" height="350">
 
-### 3. User account with Owner role in Microsoft Teams
+### 3. User account or Managed Identity with Owner role in Microsoft Teams
 - Create or use an existing user account with **Owner** role in a Team.
 
 - The user account will be used in Shifts connector (List all shifts).
