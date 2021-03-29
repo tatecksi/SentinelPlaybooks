@@ -21,8 +21,8 @@ An email will be sent to notify the assigned user on the incident assignment.
 Ensure you have the following details:
 
 
-### 1. User account/Service Principal/Managed Identity with Azure Sentinel Responder role
-- Create or use an existing user account/Service Principal/Managed Identity with Azure Sentinel Responder role.
+### 1. User account or Service Principal or Managed Identity with Azure Sentinel Responder role
+- Create or use an existing user account/ Service Principal/ Managed Identity with Azure Sentinel Responder role.
 
 - This will be used in Azure Sentinel connectors (Incident Trigger, Update incident & Add comment to incident).
 
@@ -40,10 +40,10 @@ Ensure you have the following details:
 - The user account will be used in Shifts connector (List all shifts).
 
 
-### 4. User account/Service Principal with Log Analytics Reader role
-- Create or use an existing user account/Service Principal with Log Analytics Reader role on the Azure Sentinel workspace.
+### 4. User account or Service Principal with Log Analytics Reader role
+- Create or use an existing user account or Service Principal with Log Analytics Reader role on the Azure Sentinel workspace.
 
-- The user account/Service Principal will be used in Azure Monitor Logs connector (Run query and list results).
+- The user account or Service Principal will be used in Azure Monitor Logs connector (Run query and list results).
 
 
 ### 5. An O365 account to be used to send email notification
