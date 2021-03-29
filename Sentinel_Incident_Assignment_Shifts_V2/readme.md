@@ -21,10 +21,10 @@ An email will be sent to notify the assigned user on the incident assignment.
 Ensure you have the following details:
 
 
-### 1. User account or Service Principal with Azure Sentinel Responder role
-- Create or use an existing user account/Service Principal with Azure Sentinel Responder role.
+### 1. User account/Service Principal/Managed Identity with Azure Sentinel Responder role
+- Create or use an existing user account/Service Principal/Managed Identity with Azure Sentinel Responder role.
 
-- The account will be used in Azure Sentinel connectors (Incident Trigger, Update incident & Add comment to incident).
+- This will be used in Azure Sentinel connectors (Incident Trigger, Update incident & Add comment to incident).
 
 
 ### 2. Setup Shifts schedule
