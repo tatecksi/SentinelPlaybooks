@@ -24,7 +24,9 @@ Ensure you have the following details:
 ### 1. User account or Service Principal or Managed Identity with Azure Sentinel Responder role
 - Create or use an existing user account/ Service Principal/ Managed Identity with Azure Sentinel Responder role.
 
-- This will be used in Azure Sentinel connectors (Incident Trigger, Update incident & Add comment to incident).
+- This will be used in Azure Sentinel connectors (Incident Trigger, Update incident & Add comment to incident) and a HTTP connector.
+- 
+- This example will walk you through using System Managed Identity for the above connector.
 
 
 ### 2. Setup Shifts schedule
@@ -65,8 +67,8 @@ Ensure you have the following details:
    <br />  
    
 - Click on **+ Add role assignment**. 
-- Select **Resource group** under Scope and select the **Subscription** and **Resource group** where the Azure Sentinel Workspace is located. 
-  Select **Azure Sentinel Reader** under Role and click **Save**.
+- Select **Resource group** under Scope and select the **Subscription** and **Resource group** where the Azure Sentinel **Workspace** is located. 
+  Select **Azure Sentinel Responder** under Role and click **Save**.
 
 
 ### 2. Configure connections
